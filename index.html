@@ -2,14 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style-dark.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
     <title>Портфолио Junior верстальщика</title>
   </head>
 
-  <body>
+  <body class="dark-theme">
     <header class="page-header">
       <div class="container">
+        <button class="button-theme" type="button">Изменить тему</button><br>
         <a class="header-email" href="mailto:jenia.shem@gmail.com">jenia.shem@gmail.com</a> <br>
         <a class="header-phone" href="tel:+7-999-476-95-76">+7-999-476-95-76</a> <br>
       </div>
@@ -77,7 +78,15 @@
         <p>Статический блог про обучение HTML и CSS.</p>
       </div>
     </section>
+    <script>
+      let page = document.querySelector('body');
+      let themeButton = document.querySelector('.button-theme');
 
+      themeButton.onclick = function() {
+        page.classList.toggle('light-theme');
+        page.classList.toggle('dark-theme');
+      };
+    </script>
     <footer class="page-footer">
       <div class="container">
         <a class="footer-email" href="mailto:jenia.shem@gmail.com">jenia.shem@gmail.com</a><br>
